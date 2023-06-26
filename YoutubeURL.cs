@@ -6,6 +6,7 @@ namespace YoutubeViewer
 	public partial class YoutubeURL : Form
 	{
 		public List<YoutubePlayer.YoutubePlayer> Players { get; set; }
+		private int Count { get; set; } = 0;
 
 		public YoutubeURL()
 		{
@@ -71,7 +72,7 @@ namespace YoutubeViewer
 
 		private Task PlayVideo(string url)
 		{
-			var player = new YoutubePlayer.YoutubePlayer(url.Trim());
+			var player = new YoutubePlayer.YoutubePlayer(url.Trim(), (int)numericUpDown2.Value);
 			if (showVideoPlayback.Checked)
 			{
 				player.Show();
@@ -259,6 +260,23 @@ namespace YoutubeViewer
 
 		private void clear_button13_Click(object sender, EventArgs e)
 		{
+			textBox13.Text = "";
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			textBox1.Text = "";
+			textBox2.Text = "";
+			textBox3.Text = "";
+			textBox4.Text = "";
+			textBox5.Text = "";
+			textBox6.Text = "";
+			textBox7.Text = "";
+			textBox8.Text = "";
+			textBox9.Text = "";
+			textBox10.Text = "";
+			textBox11.Text = "";
+			textBox12.Text = "";
 			textBox13.Text = "";
 		}
 

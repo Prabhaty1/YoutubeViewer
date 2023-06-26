@@ -85,7 +85,11 @@
 			clear_button10 = new Button();
 			clear_button9 = new Button();
 			clear_button13 = new Button();
+			button3 = new Button();
+			label15 = new Label();
+			numericUpDown2 = new NumericUpDown();
 			((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
 			SuspendLayout();
 			// 
 			// label1
@@ -283,7 +287,7 @@
 			// button1
 			// 
 			button1.BackColor = SystemColors.ButtonFace;
-			button1.Location = new Point(400, 580);
+			button1.Location = new Point(416, 580);
 			button1.Name = "button1";
 			button1.Size = new Size(104, 34);
 			button1.TabIndex = 24;
@@ -294,7 +298,7 @@
 			// button2
 			// 
 			button2.BackColor = SystemColors.ButtonFace;
-			button2.Location = new Point(551, 580);
+			button2.Location = new Point(679, 580);
 			button2.Name = "button2";
 			button2.Size = new Size(104, 34);
 			button2.TabIndex = 25;
@@ -437,16 +441,16 @@
 			// label13
 			// 
 			label13.AutoSize = true;
-			label13.Location = new Point(215, 38);
+			label13.Location = new Point(207, 38);
 			label13.Name = "label13";
-			label13.Size = new Size(55, 15);
+			label13.Size = new Size(153, 15);
 			label13.TabIndex = 39;
-			label13.Text = "Interval : ";
+			label13.Text = "Interval between URL start : ";
 			// 
 			// numericUpDown1
 			// 
 			numericUpDown1.Increment = new decimal(new int[] { 100, 0, 0, 0 });
-			numericUpDown1.Location = new Point(271, 36);
+			numericUpDown1.Location = new Point(367, 36);
 			numericUpDown1.Maximum = new decimal(new int[] { 9999999, 0, 0, 0 });
 			numericUpDown1.Name = "numericUpDown1";
 			numericUpDown1.Size = new Size(120, 23);
@@ -610,11 +614,44 @@
 			clear_button13.UseVisualStyleBackColor = true;
 			clear_button13.Click += clear_button13_Click;
 			// 
+			// button3
+			// 
+			button3.BackColor = SystemColors.ButtonFace;
+			button3.Location = new Point(551, 580);
+			button3.Name = "button3";
+			button3.Size = new Size(104, 34);
+			button3.TabIndex = 57;
+			button3.Text = "Clear All";
+			button3.UseVisualStyleBackColor = false;
+			button3.Click += button3_Click;
+			// 
+			// label15
+			// 
+			label15.AutoSize = true;
+			label15.Location = new Point(527, 38);
+			label15.Name = "label15";
+			label15.Size = new Size(102, 15);
+			label15.TabIndex = 58;
+			label15.Text = "Page reload time :";
+			// 
+			// numericUpDown2
+			// 
+			numericUpDown2.Increment = new decimal(new int[] { 100, 0, 0, 0 });
+			numericUpDown2.Location = new Point(635, 36);
+			numericUpDown2.Maximum = new decimal(new int[] { 9999999, 0, 0, 0 });
+			numericUpDown2.Name = "numericUpDown2";
+			numericUpDown2.Size = new Size(120, 23);
+			numericUpDown2.TabIndex = 59;
+			numericUpDown2.Value = new decimal(new int[] { 60000, 0, 0, 0 });
+			// 
 			// YoutubeURL
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 626);
+			Controls.Add(numericUpDown2);
+			Controls.Add(label15);
+			Controls.Add(button3);
 			Controls.Add(clear_button13);
 			Controls.Add(clear_button12);
 			Controls.Add(clear_button11);
@@ -676,6 +713,7 @@
 			Text = "Form1";
 			FormClosing += YoutubeURL_FormClosing;
 			((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
+			((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -739,5 +777,8 @@
 		private Button clear_button10;
 		private Button clear_button9;
 		private Button clear_button13;
+		private Button button3;
+		private Label label15;
+		private NumericUpDown numericUpDown2;
 	}
 }

@@ -53,6 +53,7 @@
 			Name = "YoutubePlayer";
 			Text = "Form1";
 			FormClosing += YoutubePlayer_FormClosing;
+			Load += YoutubePlayer_Load;
 			((System.ComponentModel.ISupportInitialize)webView21).EndInit();
 			ResumeLayout(false);
 		}
